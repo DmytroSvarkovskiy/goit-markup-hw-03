@@ -11,8 +11,38 @@
 /*---------------------STUDIO----------------------*/
 
 body {
+    margin: 0;
     font-family: 'Roboto', 'Raleway', sans-serif;
     color: var(--primary-text-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.conteiner {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
 }
 
 .visually-hidden {
@@ -36,7 +66,10 @@ body {
 /*--------------------------Header-------------------------*/
 
 .header {
+    border-bottom: 1px solid #ececec;
     background-color: var(--main-color-background);
+    padding-top: 24px;
+    padding-bottom: 25px;
 }
 
 .header-link.current {
@@ -84,6 +117,38 @@ body {
     color: var(--primary-text-color);
 }
 
+.header-list {
+    display: flex;
+    align-items: center;
+}
+
+.header-item:nth-last-child(2) {
+    margin-left: auto;
+}
+
+.header-item+.header-item {
+    margin-right: 30px;
+}
+
+.header-item:nth-child(4),
+.header-item:nth-child(6) {
+    margin-right: 0;
+}
+
+.header-item:nth-child(1) {
+    margin-right: 93px;
+}
+
+.header-item .header-link {
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.header-item>.logo {
+    padding-top: 24px;
+    padding-bottom: 25px;
+}
+
 
 /*-------------------Hunter------------------------*/
 
@@ -91,29 +156,41 @@ body {
     background-color: var(--hunter-footer-backg-color);
 }
 
+.hunter.section {
+    padding-bottom: 200px;
+    padding-top: 200px;
+    text-align: center;
+}
+
 .hunter-text {
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
-    text-align: center;
     letter-spacing: 0.06em;
     color: var(--secondary-text-color);
+    max-width: 550px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 
 /*--------КНОПКА------*/
 
 .hunter-btn {
-    font-family: inherit;
+    border: 1px solid transparent;
     font-weight: 700;
     background-color: var(--accent-color);
     font-size: 16px;
     line-height: 1.88;
-    align-items: center;
-    text-align: center;
     letter-spacing: 0.06em;
     color: var(--secondary-text-color);
     cursor: pointer;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    margin: 30px auto 0;
+    border: 1px solid transparent;
+    min-width: 200px;
+    padding: 10px 32px;
 }
 
 .hunter-btn:hover,
@@ -129,12 +206,20 @@ body {
     line-height: 1.14;
     letter-spacing: 0.03em;
     color: var(--title-text-color);
+    text-transform: uppercase;
 }
 
 .advantage-text {
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
+    max-width: 270px;
+    margin-top: 10px;
+}
+
+.advantage-list {
+    display: flex;
+    justify-content: space-between;
 }
 
 
@@ -146,6 +231,19 @@ body {
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--title-text-color);
+}
+
+.our-work.section {
+    padding-top: 0;
+}
+
+.our-work-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.our-work-item {
+    margin-top: 50px;
 }
 
 
@@ -167,17 +265,33 @@ body {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.19;
-    text-align: center;
     letter-spacing: 0.03em;
     color: var(--title-text-color);
+    margin-bottom: 10px;
 }
 
 .workers-position {
     font-size: 16px;
     line-height: 1.19;
-    text-align: center;
     letter-spacing: 0.03em;
     color: var(--primary-text-color);
+}
+
+.workers-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.workers-item {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.team {
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 
@@ -189,6 +303,12 @@ body {
 
 .footer {
     background-color: var(--hunter-footer-backg-color);
+    padding-bottom: 60px;
+    padding-top: 60px;
+}
+
+.logo.footer {
+    padding: 0;
 }
 
 .link {
@@ -208,16 +328,35 @@ body {
     color: var(--secondary-text-color);
 }
 
+.adress-link.link {
+    margin-top: 20px;
+    display: block;
+}
+
 .adress-mail,
 .adress-tel {
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
+    margin-top: 9px;
+    display: inline-block;
 }
 
 
 /*------------------PORTFOLIO--------------------*/
+
+
+/*-----------КНОПКИ----------*/
+
+.portfolio-list {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-item+.btn-item {
+    margin-left: 8px;
+}
 
 .portfolio-btn {
     font-family: inherit;
@@ -228,6 +367,10 @@ body {
     letter-spacing: 0.03em;
     cursor: pointer;
     background-color: #f5f4fa;
+    border-radius: 4px;
+    min-width: 71px;
+    padding: 6px 22px;
+    border: 1px solid transparent;
 }
 
 .portfolio-btn:hover,
@@ -236,11 +379,15 @@ body {
     background-color: var(--accent-color);
 }
 
+
+/*---------------Проекти---------------*/
+
 .portfolio-name {
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
     color: var(--title-text-color);
+    margin-bottom: 9px;
 }
 
 .portfolio-kind {
@@ -248,4 +395,20 @@ body {
     line-height: 1.88;
     letter-spacing: 0.03em;
     color: var(--primary-text-color);
+}
+
+.portfolio-item:nth-child(-n + 3) {
+    margin-top: 50px;
+}
+
+.portfolio.list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.project {
+    padding: 20px 24px;
+    border: 1px solid #eeeeee;
+    border-top: transparent;
 }
